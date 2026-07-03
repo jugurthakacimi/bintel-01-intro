@@ -110,3 +110,39 @@ def plot_line(
     line.set_ylabel(ylabel)
 
     plt.tight_layout()
+
+
+def plot_pie(
+    df: pd.DataFrame,
+    labels_col: str,
+    values_col: str,
+    title: str,
+) -> None:
+    """Plot a pie chart with percentage labels for each slice.
+
+    Args:
+        df: DataFrame containing the labels and values to plot.
+        labels_col: Column name to use as pie slice labels.
+        values_col: Column name containing the numeric values.
+        title: Title to display above the chart.
+
+    Returns:
+        None
+    """
+    LOG.info(f"Plotting pie chart: {title}")
+
+    fig, ax = plt.subplots(figsize=(7, 7))
+
+    labels: list[str] = df[labels_col].astype(str).tolist()
+
+    ax.pie(
+        df[values_col],
+        labels=labels,
+        autopct="%1.1f%%",
+        startangle=90,
+        pctdistance=0.8,
+    )
+
+    ax.set_title(title)
+    ax.axis("equal")  # Keeps the pie circular instead of oval
+    fig.tight_layout()
