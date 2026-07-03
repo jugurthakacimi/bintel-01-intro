@@ -109,6 +109,9 @@ uvx pre-commit run --all-files
 # run the example module
 uv run python -m bizintel.app_case
 
+# run the module built by Jugurtha
+uv run python -m bizintel.app_jugurtha
+
 # run common chores: format, lint, run checks and tests...
 uv run ruff format .
 uv run ruff check . --fix
