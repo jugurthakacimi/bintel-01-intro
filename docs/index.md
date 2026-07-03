@@ -23,7 +23,7 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-- I added a plot_pie functionto create pie charts for sales by region and sales by product category. I also added a percentage column to the sales by region and sales by product category dataframes to show each region's and category's share of total sales.
+- I added a plot_pie function to create pie charts for sales by region and sales by product category. I also added a percentage column to the sales by region and sales by product category dataframes to show each region's and category's share of total sales.
 - I chose this change because it provides a visual representation of the sales distribution, since pie charts show proportion and percentage of each category or region in relation to the whole.
 - The code confirmed to be working correctly, as the pie charts were generated successfully and the percentage columns were added to the dataframes. Also, the percentage summed to 100% for both dataframes, confirming the calculations were correct.
 
